@@ -1,12 +1,16 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CreationalDesignPattern
 {
     class AbstractFactory
     {
-        static void Main(string[] args)
+        public static void Run()
         {
-            DoActionOnCar(new SUVFactory("honda","crv"));
+            DoActionOnCar(new SUVFactory("honda", "crv"));
             DoActionOnCar(new CarFactory("Tata", "nano"));
         }
 
@@ -20,109 +24,108 @@ namespace CreationalDesignPattern
                 Console.WriteLine("can drive on beach");
             }
         }
-    }
 
-
-    public class SUVFactory : CarFactory
-    {
-        public SUVFactory(string make, string model) : base(make, model)
+        public class SUVFactory : CarFactory
         {
-            this.engine = new SUVEngine();
-            this.tire = new BigTire();
-        }
-    }
-
-
-    public class CarFactory
-    {
-        public CarFactory(string make, string model)
-        {
-            this.make = make;
-            this.model = model;
-            this.engine = new CarEngine();
-            this.tire = new Tire();
-        }
-
-        public void Run()
-        {
-            if (!isRunning)
+            public SUVFactory(string make, string model) : base(make, model)
             {
-                isRunning = true;
+                this.engine = new SUVEngine();
+                this.tire = new BigTire();
             }
-            else
+        }
+
+
+        public class CarFactory
+        {
+            public CarFactory(string make, string model)
             {
-                Console.WriteLine("Already running!");
+                this.make = make;
+                this.model = model;
+                this.engine = new CarEngine();
+                this.tire = new Tire();
             }
 
-        }
-
-        public void stop()
-        {
-            if (isRunning)
+            public void Run()
             {
-                isRunning = false;
+                if (!isRunning)
+                {
+                    isRunning = true;
+                }
+                else
+                {
+                    Console.WriteLine("Already running!");
+                }
+
             }
-            else
+
+            public void stop()
             {
-                Console.WriteLine("Already stopped!");
+                if (isRunning)
+                {
+                    isRunning = false;
+                }
+                else
+                {
+                    Console.WriteLine("Already stopped!");
+                }
+
             }
 
+            private bool isRunning;
+
+            private string make;
+
+            private string model;
+
+            public Engine engine;
+
+            public Tire tire;
         }
 
-        private bool isRunning;
-
-        private string make;
-
-        private string model;
-
-        public Engine engine;
-
-        public Tire tire;
-    }
-
-    public class Engine
-    {
-        public virtual void MakeSound()
+        public class Engine
         {
-            Console.WriteLine("zooooooooom");
+            public virtual void MakeSound()
+            {
+                Console.WriteLine("zooooooooom");
+            }
+
+            public virtual int RepairInterval()
+            {
+                return 4;
+            }
         }
 
-        public virtual int RepairInterval()
+        public class CarEngine : Engine
+        { }
+
+        public class SUVEngine : Engine
         {
-            return 4;
+            public override void MakeSound()
+            {
+                Console.WriteLine("zzzzzzzzoooooooooooooooooom");
+            }
+
+            public override int RepairInterval()
+            {
+                return 3;
+            }
         }
-    }
 
-    public class CarEngine : Engine
-    { }
-
-    public class SUVEngine : Engine
-    {
-        public override void MakeSound()
+        public class Tire
         {
-            Console.WriteLine("zzzzzzzzoooooooooooooooooom");
+            public virtual int RadialSize()
+            {
+                return 16;
+            }
         }
 
-        public override int RepairInterval()
-        {
-            return 3;
-        }
-    }
 
-    public class Tire
-    {
-        public virtual int RadialSize()
+        public class BigTire : Tire
         {
-            return 16;
-        }
-    }
-
-
-    public class BigTire : Tire
-    {
-        public override int RadialSize()
-        {
-            return 19;
+            public override int RadialSize()
+            {
+                return 19;
+            }
         }
     }
 }
