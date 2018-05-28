@@ -7,8 +7,9 @@ namespace CreationalDesignPattern
         static void Main(string[] args)
         {
             //AbstractFactory.Run();
-            Builder.Run();
-
+            // Builder.Run();
+            //  FactoryMethod.Run();
+            ProtoType.Run();
         }
     }
 }
