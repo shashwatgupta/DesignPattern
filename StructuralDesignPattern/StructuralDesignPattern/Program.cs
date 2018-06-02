@@ -10,7 +10,8 @@ namespace StructuralDesignPattern
     {
         static void Main(string[] args)
         {
-            Adapter.Run();
+            //Adapter.Run();
+            Bridge.Run();
         }
     }
 }
