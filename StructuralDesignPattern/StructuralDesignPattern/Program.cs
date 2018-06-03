@@ -13,7 +13,8 @@ namespace StructuralDesignPattern
             //Adapter.Run();
             // Bridge.Run();
             // Composite.Run();
-            Decorator.Run();
+            //Decorator.Run();
+            Facade.Run();
         }
     }
 }
