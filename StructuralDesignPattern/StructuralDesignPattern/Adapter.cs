@@ -15,17 +15,15 @@ namespace StructuralDesignPattern
                 boss = "AwesomeBoss",
                 IsIndian = true
             };
-        List<Animal> animalList = new List<Animal>()
+            List<Animal> animalList = new List<Animal>()
             {
                 new Cow(), new Chicken(),new ManAdapter(m)
-        };
+            };
 
             foreach (Animal x in animalList)
             {
                 Console.WriteLine(x.GetOwner());
             }
-             
-
         }
     }
 
@@ -33,7 +31,8 @@ namespace StructuralDesignPattern
     {
         public abstract int GetLegs();
 
-        public virtual void SetOwner(string owner) {
+        public virtual void SetOwner(string owner)
+        {
             this.owner = owner;
         }
 
@@ -42,7 +41,7 @@ namespace StructuralDesignPattern
             return owner;
         }
 
-        private string owner="Default";
+        private string owner = "Default";
 
     }
 

@@ -11,7 +11,9 @@ namespace StructuralDesignPattern
         static void Main(string[] args)
         {
             //Adapter.Run();
-            Bridge.Run();
+            // Bridge.Run();
+            // Composite.Run();
+            Decorator.Run();
         }
     }
 }
