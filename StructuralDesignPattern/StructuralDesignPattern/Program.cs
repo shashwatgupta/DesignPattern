@@ -14,7 +14,8 @@ namespace StructuralDesignPattern
             // Bridge.Run();
             // Composite.Run();
             //Decorator.Run();
-            Facade.Run();
+            //Facade.Run();
+            Flyweight.Run();
         }
     }
 }

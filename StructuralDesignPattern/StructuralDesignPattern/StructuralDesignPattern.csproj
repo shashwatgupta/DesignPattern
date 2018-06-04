@@ -48,6 +48,7 @@
     <Compile Include="Composite.cs" />
     <Compile Include="Decorator.cs" />
     <Compile Include="Facade.cs" />
+    <Compile Include="Flyweight.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
