@@ -105,6 +105,4 @@ namespace StructuralDesignPattern
 
         private int _index = 0;
     }
-
-
 }
