@@ -10,7 +10,8 @@ namespace BehavioralDesignPattern
     {
         static void Main(string[] args)
         {
-            ChainOfResponsibility.Run();
+            //ChainOfResponsibility.Run();
+            CommandPattern.Run();
         }
     }
 }
