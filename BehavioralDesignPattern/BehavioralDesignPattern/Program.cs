@@ -11,7 +11,9 @@ namespace BehavioralDesignPattern
         static void Main(string[] args)
         {
             //ChainOfResponsibility.Run();
-            CommandPattern.Run();
+            //CommandPattern.Run();
+            //ObserverPattern.Run();
+            StatePattern.Run();
         }
     }
 }
