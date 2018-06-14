@@ -13,7 +13,8 @@ namespace BehavioralDesignPattern
             //ChainOfResponsibility.Run();
             //CommandPattern.Run();
             //ObserverPattern.Run();
-            StatePattern.Run();
+            //StatePattern.Run();
+            StrategyPattern.Run();
         }
     }
 }
