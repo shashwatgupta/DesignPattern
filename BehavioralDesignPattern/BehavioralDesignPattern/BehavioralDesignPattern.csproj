@@ -45,11 +45,14 @@
   <ItemGroup>
     <Compile Include="ChainOfResponsibility.cs" />
     <Compile Include="CommandPattern.cs" />
+    <Compile Include="Iterator.cs" />
+    <Compile Include="MomentoPattern.cs" />
     <Compile Include="ObserverPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StatePattern.cs" />
     <Compile Include="StrategyPattern.cs" />
+    <Compile Include="TemplateMethod.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

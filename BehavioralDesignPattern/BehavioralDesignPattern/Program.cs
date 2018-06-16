@@ -14,7 +14,10 @@ namespace BehavioralDesignPattern
             //CommandPattern.Run();
             //ObserverPattern.Run();
             //StatePattern.Run();
-            StrategyPattern.Run();
+            //StrategyPattern.Run();
+            //TemplateMethod.Run();
+            //Iterator.Run();
+            MomentoPattern.Run();
         }
     }
 }
