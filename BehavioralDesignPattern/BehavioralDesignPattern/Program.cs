@@ -17,7 +17,8 @@ namespace BehavioralDesignPattern
             //StrategyPattern.Run();
             //TemplateMethod.Run();
             //Iterator.Run();
-            MomentoPattern.Run();
+            //MomentoPattern.Run();
+            Mediator.Run();
         }
     }
 }
